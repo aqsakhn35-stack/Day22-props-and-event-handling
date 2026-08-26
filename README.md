@@ -9,21 +9,28 @@ Reusable `DestinationCard` component built for the Frontend Development Internsh
 - Each card shows a "Planned" or "Visited" badge and is responsive via CSS grid.
 
 ## Project structure
+
 wanderlist/
-├── src/
-│   ├── components/
-│   │   ├── DestinationCard.jsx
-│   │   └── DestinationCard.css
-│   ├── data/
-│   │   └── destinations.js
-│   ├── App.jsx
-│   ├── App.css
-│   └── main.jsx
-└── README.md
+  src/
+    components/
+      DestinationCard.jsx
+      DestinationCard.css
+    data/
+      destinations.js
+    App.jsx
+    App.css
+    main.jsx
+  README.md
+
 ## Run locally
-```bash
+
 npm install
 npm run dev
+
+## Screenshots
+
+
+
 ![Card view 1](./screenshots/card1.png)
 
 
@@ -31,3 +38,4 @@ npm run dev
 
 
 ![Card view 2](./screenshots/card2.png)
+
