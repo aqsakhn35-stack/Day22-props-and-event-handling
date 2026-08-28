@@ -19,6 +19,7 @@ function App() {
             country={dest.country}
             budget={dest.budget}
             status={dest.status}
+            travelNote={dest.travelNote}
           />
         ))}
       </main>

@@ -25,6 +25,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover .destination-card__image {
+  transform: scale(1.04);
 }
 
 .destination-card__badge {
@@ -38,6 +43,7 @@
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  z-index: 2;
 }
 
 .destination-card__badge--planned {
@@ -46,6 +52,34 @@
 
 .destination-card__badge--visited {
   background: #2e9e5b;
+}
+
+/* Travel Note */
+.destination-card__note {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.82);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  z-index: 3;
+  animation: noteFadeIn 0.2s ease;
+}
+
+@keyframes noteFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .destination-card__body {
@@ -80,8 +114,40 @@
   color: #d97706;
 }
 
+/* Add to Bucket List Button */
+.destination-card__button {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.destination-card__button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.destination-card__button:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive */
 @media (max-width: 480px) {
   .destination-card__place {
     font-size: 1rem;
+  }
+
+  .destination-card__button {
+    width: 100%;
+  }
+
+  .destination-card__note {
+    font-size: 0.8rem;
   }
 }

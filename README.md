@@ -1,41 +1,44 @@
-# WanderList — Day 21: React Components
+# WanderList – Day 22: Props & Event Handling
 
-Reusable `DestinationCard` component built for the Frontend Development Internship, Week 4 / Day 21 task.
+## Overview
+Enhanced the `DestinationCard` component to make it interactive using React Props and Event Handling. Destination data (image, place name, country, budget, travel status, and travel notes) is now passed dynamically through props, with an "Add to Bucket List" feature and hover-based travel tips.
 
-## What this does
-- `DestinationCard` is a presentational component that takes `image`, `place`, `country`, `budget`, and `status` as props.
-- `src/data/destinations.js` holds an array of destination objects.
-- `App.jsx` maps over the array with `.map()` and renders one `DestinationCard` per entry — no duplicated markup.
-- Each card shows a "Planned" or "Visited" badge and is responsive via CSS grid.
-
-## Project structure
-
-wanderlist/
-  src/
-    components/
-      DestinationCard.jsx
-      DestinationCard.css
-    data/
-      destinations.js
-    App.jsx
-    App.css
-    main.jsx
-  README.md
-
-## Run locally
-
-npm install
-npm run dev
+## Features
+- Destination data displayed dynamically via props
+- "Add to Bucket List" button with click event handling and visual feedback
+- Hover effect showing a short travel note/tip
+- Fully responsive design across screen sizes
 
 ## Screenshots
 
+### Hover Effect – Travel Note
 
 
-![Card view 1](./screenshots/card1.png)
+![Hover Effect](screenshots/1.png)
 
 
 
+### Add to Bucket List – Clicked State
 
 
-![Card view 2](./screenshots/card2.png)
+![Bucket List Added](screenshots/2.png)
+
+
+
+### Mobile View
+
+
+![Mobile View](screenshots/3.png)
+
+
+
+## Tech Stack
+- React
+- CSS (custom, responsive with media queries)
+- Vite
+
+## How to Run
+```bash
+npm install
+npm run dev
 

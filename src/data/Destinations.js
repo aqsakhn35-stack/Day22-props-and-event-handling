@@ -6,6 +6,7 @@ const destinations = [
     country: "Pakistan",
     budget: 45000,
     status: "planned",
+    travelNote: "Best time to visit is from April to October.",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const destinations = [
     country: "Indonesia",
     budget: 120000,
     status: "visited",
+    travelNote: "Explore Bali's beaches, temples, and beautiful rice terraces.",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const destinations = [
     country: "Greece",
     budget: 210000,
     status: "planned",
+    travelNote: "Enjoy the famous sunset views and explore the charming villages.",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const destinations = [
     country: "Japan",
     budget: 175000,
     status: "visited",
+    travelNote: "Visit Kyoto during spring for beautiful cherry blossoms.",
   },
 ];
 
