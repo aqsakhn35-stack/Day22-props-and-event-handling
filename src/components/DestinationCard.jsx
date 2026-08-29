@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./DestinationCard.css";
 
 function DestinationCard({
   image,
@@ -8,15 +7,12 @@ function DestinationCard({
   budget,
   status,
   travelNote,
+  isAdded,
+  onToggle,
 }) {
-  const [isAdded, setIsAdded] = useState(false);
   const [showNote, setShowNote] = useState(false);
 
   const isVisited = status === "visited";
-
-  const handleAddToBucketList = () => {
-    setIsAdded(!isAdded);
-  };
 
   return (
     <div
@@ -52,9 +48,7 @@ function DestinationCard({
       <div className="destination-card__body">
         <h3 className="destination-card__place">{place}</h3>
 
-        <p className="destination-card__country">
-          {country}
-        </p>
+        <p className="destination-card__country">{country}</p>
 
         <p className="destination-card__budget">
           Est. Budget: <span>PKR {budget.toLocaleString()}</span>
@@ -62,7 +56,7 @@ function DestinationCard({
 
         <button
           className="destination-card__button"
-          onClick={handleAddToBucketList}
+          onClick={onToggle}
         >
           {isAdded ? "✓ Added to Bucket List" : "Add to Bucket List"}
         </button>

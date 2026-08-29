@@ -1,28 +1,74 @@
 .app {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 20px 60px;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
 }
 
 .app__header {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .app__header h1 {
   margin: 0;
-  font-size: 2rem;
-  color: #1c1c1e;
+  font-size: 2.2rem;
 }
 
 .app__header p {
-  margin: 4px 0 0;
-  color: #6b6b6f;
+  margin-top: 8px;
+  color: #666;
 }
 
 .app__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+
+.trip-budget {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.trip-budget__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trip-budget__label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.trip-budget__item strong {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 900px) {
+  .app__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+  }
+
+  .app__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-budget {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
